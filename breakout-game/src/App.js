@@ -7,20 +7,19 @@ class App extends Component {
         <div className="GameBoard"
         ref={(el) => { this.domNode = el }}>
 
-        <Ball 
-          x={this.state.ballX}
-          y={this.state.ballY}/>
-        
-          <div className= "ball">
-          </div>
-          <ballObj>tes</ballObj>
+        {/* <Ball
+          x={this.state.posX}
+          y={this.state.posY}/> */}
+        <BallObj/>
+          <div className= "ball"></div>
+          <ballObj>test</ballObj>
           
-        </div>      
+        </div>
     );
   }
 }
 
-class ballObj extends Component{
+class BallObj extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -43,7 +42,7 @@ class ballObj extends Component{
       // top: 300,
     }     
     return(
-      <div class="ball" style={this.props.stylesObj}/>
+      <div class="ball" style={stylesObj}/>
     )   ;
   }
 
