@@ -27,7 +27,12 @@ class BallObj extends Component{
     this.setState({
       posX: this.state.posX + speedX
     });
-    
+  }
+
+  setPosY(speedY){
+    this.setState({
+      posY: this.state.posY + speedY
+    });
   }
 
   render(){    
@@ -51,8 +56,12 @@ class BallObj extends Component{
   updateBallPos(){
     this.setState((prevState, props) => ({
       ballX: prevState.ballX + prevState.ballSpeedX,
+      ballY: prevState.ballY + prevState.ballSpeedY
+    }));
+  }
 
-    }))
+  update(){
+    updateBallPos();
   }
 }
 
