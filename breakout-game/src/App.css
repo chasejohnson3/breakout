@@ -14,10 +14,7 @@
   border: 1px solid black;
   border-radius: 15px;
   background-color: black;
-  position: relative;
-  top: 50%;
-  left: 50%;
   position: fixed;
-  left: 300px;
-  top: 300px;
+  /* left: 300px;
+  top: 300px; */
 }

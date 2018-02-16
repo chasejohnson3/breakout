@@ -7,12 +7,7 @@ class App extends Component {
         <div className="GameBoard"
         ref={(el) => { this.domNode = el }}>
 
-        {/* <Ball
-          x={this.state.posX}
-          y={this.state.posY}/> */}
         <BallObj/>
-          <div className= "ball"></div>
-          <ballObj>test</ballObj>
           
         </div>
     );
@@ -23,23 +18,22 @@ class BallObj extends Component{
   constructor(props){
     super(props);
     this.state = {
-      posX: 15,
-      posY: 50,
-    }
+      posX: 110,
+      posY: 100,
+    };
   }
+
+  setPosX(speedX){
+    this.setState({
+      posX: this.state.posX + speedX
+    });
+    
+  }
+
   render(){    
     var stylesObj ={
-      width: 30,
-      height: 30,
-      border: 1,
-      // border-radius: 15,
-      // background-color: black,
-      // position: relative,
-      top: 50,
-      left: 50,
-      // position: fixed,
-      // left: 300,
-      // top: 300,
+      top: this.state.posY,
+      left: this.state.posX,
     }     
     return(
       <div class="ball" style={stylesObj}/>
