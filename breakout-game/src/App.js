@@ -6,13 +6,39 @@ class App extends Component {
     return (     
         <div className="GameBoard"
         ref={(el) => { this.domNode = el }}>
-
+        <GameBoard/>
         <BallObj/>
           
         </div>
     );
   }
 }
+
+class GameBoard extends Component{
+  constructor(props){
+    super(props);
+  }
+
+    render(){
+      var stylesObj ={
+        width: 400,
+        height: 500,
+        border: 2,
+        // text-align: center,
+        // position: fixed,
+        left: 10,
+        top: 10,
+      }
+      return(
+        <div class="ball" style={stylesObj}/>
+      )   ;
+    }
+    // render(){}
+    // update(){}
+    // componentDidMount(){
+    //   setInterval(this.update.bind(this));
+}  
+
 
 class BallObj extends Component{
   constructor(props){
@@ -21,7 +47,7 @@ class BallObj extends Component{
       posX: 110,
       posY: 100,
     };
-  }
+  }  
 
   setPosX(speedX){
     this.setState({
@@ -60,9 +86,9 @@ class BallObj extends Component{
     }));
   }
 
-  update(){
-    updateBallPos();
-  }
+  // update(){
+  //   updateBallPos();
+  // }
 }
 
 export default App;
