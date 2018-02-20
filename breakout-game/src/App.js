@@ -46,6 +46,8 @@ class BallObj extends Component{
     this.state = {
       posX: 110,
       posY: 100,
+      ballSpeedX:20,
+      ballSpeedY: 20,
     };
   }  
 
@@ -72,7 +74,7 @@ class BallObj extends Component{
   }
 
   componentDidMount(){
-    this._updateInterval = window.setInterval(this.update, 16);
+    this._updateInterval = window.setInterval(this.update.bind(this), 16);
   }
 
   componentWillUnmount(){
@@ -81,14 +83,20 @@ class BallObj extends Component{
 
   updateBallPos(){
     this.setState((prevState, props) => ({
-      ballX: prevState.ballX + prevState.ballSpeedX,
-      ballY: prevState.ballY + prevState.ballSpeedY
+      posX: prevState.posX + prevState.ballSpeedX,
+      posY: prevState.posY + prevState.ballSpeedY
     }));
   }
 
+<<<<<<< HEAD
   // update(){
   //   updateBallPos();
   // }
+=======
+  update(){
+    this.updateBallPos();
+  }
+>>>>>>> 9b6eee291456730d1c8111d5bb3d9f28497ad4b8
 }
 
 export default App;
