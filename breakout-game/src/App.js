@@ -19,31 +19,11 @@ class GameBoard extends Component{
   constructor(props){
     super(props);
   }
-
     render(){
-      var stylesObj ={
-        width: 400,
-        height: 500,
-        color: "white",
-        background: "white",
-        border: 2,
-        border: "solid black",
-        radius: 0,
-
-        
-        // text-align: center,
-        // position: fixed,
-        left: 60,
-        top: 80,
-      }
       return(
-        <div class="ball" style={stylesObj}/>
-      )   ;
+        <div class="GameBoard"/>
+      );
     }
-    // render(){}
-    // update(){}
-    // componentDidMount(){
-    //   setInterval(this.update.bind(this));
 }  
 
 
