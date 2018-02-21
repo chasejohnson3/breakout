@@ -4,8 +4,9 @@ import './App.css';
 class App extends Component {
   render() {
     return (     
-        <div className="GameBoard"
-        ref={(el) => { this.domNode = el }}>
+        // <div className="GameBoard"
+        // ref={(el) => { this.domNode = el }}>
+        <div>
         <GameBoard/>
         <BallObj/>
           
@@ -23,11 +24,17 @@ class GameBoard extends Component{
       var stylesObj ={
         width: 400,
         height: 500,
+        color: "white",
+        background: "white",
         border: 2,
+        border: "solid black",
+        radius: 0,
+
+        
         // text-align: center,
         // position: fixed,
-        left: 10,
-        top: 10,
+        left: 60,
+        top: 80,
       }
       return(
         <div class="ball" style={stylesObj}/>
@@ -88,15 +95,9 @@ class BallObj extends Component{
     }));
   }
 
-<<<<<<< HEAD
-  // update(){
-  //   updateBallPos();
-  // }
-=======
   update(){
     this.updateBallPos();
   }
->>>>>>> 9b6eee291456730d1c8111d5bb3d9f28497ad4b8
 }
 
 export default App;
