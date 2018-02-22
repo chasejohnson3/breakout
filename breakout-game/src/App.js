@@ -24,7 +24,9 @@ class GameBoard extends Component{
       <div class="GameBoard"/>
     );
   }
-}  
+}
+
+
 
 
 class BallObj extends Component{
@@ -58,6 +60,7 @@ class BallObj extends Component{
     return(
       <div class="GameBoard">
         <div class="ball" style={stylesObj}/>
+        <div class="brick"/>
       </div>
     )   ;
   }
