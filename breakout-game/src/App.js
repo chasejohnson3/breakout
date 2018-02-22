@@ -33,8 +33,8 @@ class BallObj extends Component{
     this.state = {
       posX: 110,
       posY: 100,
-      ballSpeedX:5,
-      ballSpeedY: 5,
+      ballSpeedX:2,
+      ballSpeedY: 6,
     };
   }  
 
@@ -100,7 +100,7 @@ class BallObj extends Component{
 
   update(){
     this.updateBallPos();
-    this.showballPos();
+    //this.showballPos();
     this.updateBallDir();
   }
 }
