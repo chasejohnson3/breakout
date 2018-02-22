@@ -33,8 +33,8 @@ class BallObj extends Component{
     this.state = {
       posX: 110,
       posY: 100,
-      ballSpeedX:20,
-      ballSpeedY: 20,
+      ballSpeedX:5,
+      ballSpeedY: 5,
     };
   }  
 
@@ -75,8 +75,33 @@ class BallObj extends Component{
     }));
   }
 
+  updateBallDir()
+  {
+    if(this.state.posX > 400 || this.state.posX <50 ) {
+      this.setState((prevState, props) => ({
+        ballSpeedX: -1 * prevState.ballSpeedX,
+        //posY: prevState.posY + prevState.ballSpeedY
+      }));
+    }
+    if(this.state.posY>500 || this.state.posY<50)
+    {
+      this.setState((prevState, props) => ({
+        ballSpeedY: -1 * prevState.ballSpeedY,
+        //posY: prevState.posY + prevState.ballSpeedY
+      }));
+    }
+  }
+
+  showballPos()
+  {
+    console.log(this.state.posX)
+    //console.log(this.state.posY)
+  }
+
   update(){
     this.updateBallPos();
+    this.showballPos();
+    this.updateBallDir();
   }
 }
 
