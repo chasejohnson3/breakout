@@ -26,7 +26,16 @@ class GameBoard extends Component{
   }
 }
 
-
+class Brick extends Component{
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      show: true,
+      number:1,
+    }
+  }
+}
 
 
 class BallObj extends Component{
