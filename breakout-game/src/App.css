@@ -19,3 +19,11 @@
   /* left: 300px;
   top: 300px; */
 }
+
+.brick{
+  width: 200px;
+  height:30px;
+  border: 1px solid red;
+  background-color: orangered;
+  position: fixed;
+}
