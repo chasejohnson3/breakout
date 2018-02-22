@@ -79,13 +79,13 @@ class BallObj extends Component{
 
   updateBallDir()
   {
-    if(this.state.posX > 400 || this.state.posX <0 ) {
+    if(this.state.posX > 385 || this.state.posX <15 ) {
       this.setState((prevState, props) => ({
         ballSpeedX: -1 * prevState.ballSpeedX,
         //posY: prevState.posY + prevState.ballSpeedY
       }));
     }
-    if(this.state.posY>500 || this.state.posY<0)
+    if(this.state.posY> 485 || this.state.posY<15)
     {
       this.setState((prevState, props) => ({
         ballSpeedY: -1 * prevState.ballSpeedY,
