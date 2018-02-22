@@ -19,11 +19,11 @@ class GameBoard extends Component{
   constructor(props){
     super(props);
   }
-    render(){
-      return(
-        <div class="GameBoard"/>
-      );
-    }
+  render(){
+    return(
+      <div class="GameBoard"/>
+    );
+  }
 }  
 
 
@@ -56,7 +56,9 @@ class BallObj extends Component{
       left: this.state.posX,
     }     
     return(
-      <div class="ball" style={stylesObj}/>
+      <div class="GameBoard">
+        <div class="ball" style={stylesObj}/>
+      </div>
     )   ;
   }
 
@@ -77,13 +79,13 @@ class BallObj extends Component{
 
   updateBallDir()
   {
-    if(this.state.posX > 400 || this.state.posX <50 ) {
+    if(this.state.posX > 400 || this.state.posX <0 ) {
       this.setState((prevState, props) => ({
         ballSpeedX: -1 * prevState.ballSpeedX,
         //posY: prevState.posY + prevState.ballSpeedY
       }));
     }
-    if(this.state.posY>500 || this.state.posY<50)
+    if(this.state.posY>500 || this.state.posY<0)
     {
       this.setState((prevState, props) => ({
         ballSpeedY: -1 * prevState.ballSpeedY,
