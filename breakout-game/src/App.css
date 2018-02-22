@@ -21,9 +21,11 @@
 }
 
 .brick{
-  width: 200px;
+  width: 400px;
   height:30px;
   border: 1px solid red;
   background-color: orangered;
   position: fixed;
+  top:10%;
+  left: 10%;
 }
