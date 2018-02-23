@@ -107,10 +107,11 @@ class BallObj extends Component{
         //posY: prevState.posY + prevState.ballSpeedY
       }));
     }
-    if(this.state.posY> 485 || this.state.posY<15)
+    if(this.state.posY> 485 || this.state.posY<45)
     {
       this.setState((prevState, props) => ({
         ballSpeedY: -1 * prevState.ballSpeedY,
+        
         //posY: prevState.posY + prevState.ballSpeedY
       }));
     }
