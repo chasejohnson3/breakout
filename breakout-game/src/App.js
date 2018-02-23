@@ -28,6 +28,9 @@ class GameBoard extends Component{
   }
 }
 
+/*
+  class for the brick class, it will know if the ball hit it or not
+ */
 class Brick extends Component{
   constructor(props)
   {
