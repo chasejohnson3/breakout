@@ -104,7 +104,7 @@ class BallObj extends Component{
         //posY: prevState.posY + prevState.ballSpeedY
       }));
     }
-  }//test
+  }
 
   showballPos()
   {
