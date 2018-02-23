@@ -9,6 +9,8 @@ class App extends Component {
         <div>
         <GameBoard/>
         <BallObj/>
+        
+        
           
         </div>
     );
@@ -35,6 +37,11 @@ class Brick extends Component{
       number:1,
     }
   }
+  // render(){
+  //   if (this.show){
+  //     return(<Brick/>);
+  //   }
+  // }
 }
 
 
@@ -97,7 +104,7 @@ class BallObj extends Component{
         //posY: prevState.posY + prevState.ballSpeedY
       }));
     }
-    if(this.state.posY> 485 || this.state.posY<35)
+    if(this.state.posY> 485 || this.state.posY<15)
     {
       this.setState((prevState, props) => ({
         ballSpeedY: -1 * prevState.ballSpeedY,
