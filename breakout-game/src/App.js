@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+var showBrick = true;
+
 class App extends Component {
   render() {
     return (     
@@ -79,7 +81,7 @@ class BallObj extends Component{
     return(
       <div class="GameBoard">
         <div class="ball" style={stylesObj}/>
-        <div class="brick"/>
+        {showBrick && <div class="brick"/>}
       </div>
     )   ;
   }
@@ -111,7 +113,7 @@ class BallObj extends Component{
     {
       this.setState((prevState, props) => ({
         ballSpeedY: -1 * prevState.ballSpeedY,
-        
+
         //posY: prevState.posY + prevState.ballSpeedY
       }));
     }
