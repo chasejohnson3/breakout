@@ -8,12 +8,10 @@ class Brick extends Component {
       this.state = {
         show: true,
         number: 1,
-        posX: 1,
-        posY: 1,
-        top: props.y,
-        left: props.x,
-      }
-  
+        posX: props.x,
+        posY: props.y,
+        
+      }  
     }
   
     wasHit() {
@@ -40,15 +38,15 @@ class Brick extends Component {
   
     render() {
         var stylesObj = {
-            top: 1,
-            left: 1,
-            show: true,
-          }
-      if (this.show) {
+            top: this.state.posY,
+            left: this.state.posX,
+            height: global.brickHeight,
+            width: global.brickWidth,
+        }
+      if (this.state.show) {
         return (
-        <div className="Brick" style={stylesObj}>
-  
-        </div>);
+        <div className="brick" style={stylesObj}/>
+          );
       }else{
         return null;
       }

@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import './GameBoard.js';
+import boardTop from './GameBoard.js';
+import boardRight from './GameBoard.js';
+// import boardBottom from './GameBoard.js';
+import boardLeft from './GameBoard.js';
 
 class BallObj extends Component {
     constructor(props) {
@@ -26,6 +31,7 @@ class BallObj extends Component {
     }
   
     setPosY(speedY) {
+      
       this.setState({
         posY: this.state.posY + speedY
       });
@@ -35,6 +41,7 @@ class BallObj extends Component {
       var stylesObj = {
         top: this.state.posY,
         left: this.state.posX,
+        borderRadius: global.ballDiameter,
       }
       return (
   
@@ -59,13 +66,13 @@ class BallObj extends Component {
     }
   
     updateBallDir() {
-      if (this.state.posX > 385 || this.state.posX < 15) {
+      if (this.state.posX > global.boardWidth-global.ballDiameter || this.state.posX < 0) {
         this.setState((prevState, props) => ({
           ballSpeedX: -1 * prevState.ballSpeedX,
           //posY: prevState.posY + prevState.ballSpeedY
         }));
       }
-      if (this.state.posY > 485 || this.state.posY < 45) {
+      if (this.state.posY > global.boardHeight-global.ballDiameter || this.state.posY < 0) {
         this.setState((prevState, props) => ({
           ballSpeedY: -1 * prevState.ballSpeedY,
   
